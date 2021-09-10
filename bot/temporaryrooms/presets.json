@@ -1,0 +1,100 @@
+{
+    "286166598048284683": {
+        "799731802096271370": {
+            "name": ";",
+            "hide": false,
+            "lock": false,
+            "members": [],
+            "admins": [],
+            "blocks": []
+        },
+        "836748124139552788": {
+            "name": "dasda",
+            "hide": false,
+            "lock": false,
+            "members": [],
+            "admins": [],
+            "blocks": []
+        }
+    },
+    "819982418340479046": {
+        "760216480435798017": {
+            "name": "...",
+            "hide": false,
+            "lock": false,
+            "members": [],
+            "admins": [
+                "798407626512662528"
+            ],
+            "blocks": []
+        },
+        "728675937172062208": {
+            "name": "\ud83d\udc07",
+            "hide": false,
+            "lock": false,
+            "members": [],
+            "admins": [],
+            "blocks": []
+        }
+    },
+    "446399616598933525": {
+        "799731802096271370": {
+            "name": "Xavasca",
+            "hide": false,
+            "lock": true,
+            "members": [],
+            "admins": [],
+            "blocks": []
+        }
+    },
+    "669975205325570048": {
+        "836748124139552788": {
+            "name": "default",
+            "hide": false,
+            "lock": false,
+            "members": [],
+            "admins": [],
+            "blocks": []
+        }
+    },
+    "411651287550001163": {
+        "799731802096271370": {
+            "name": "Solitario",
+            "hide": true,
+            "lock": true,
+            "members": [],
+            "admins": [],
+            "blocks": []
+        }
+    },
+    "431478290675662849": {
+        "827391873927872562": {
+            "name": "*Sala de nixoyd",
+            "hide": false,
+            "lock": false,
+            "members": [],
+            "admins": [],
+            "blocks": []
+        }
+    },
+    "311984402756403206": {
+        "868970273205014619": {
+            "name": "Sala de \ud83d\udc51",
+            "hide": false,
+            "lock": false,
+            "members": [],
+            "admins": [],
+            "blocks": []
+        }
+    },
+    "852705566487740467": {
+        "545009488781115402": {
+            "name": "default",
+            "hide": false,
+            "lock": false,
+            "members": [],
+            "admins": [],
+            "blocks": []
+        }
+    }
+}
