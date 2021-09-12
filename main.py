@@ -17,7 +17,7 @@ def get_prefix(client, message):
 
 intents = discord.Intents.default()
 intents.members = True
-client = commands.AutoShardedBot(command_prefix=get_prefix, help_command=None, intents=intents)
+client = commands.AutoShardedBot(command_prefix=".", help_command=None, intents=intents)
 dotenv.load_dotenv(dotenv.find_dotenv())
 
 @client.event
@@ -82,6 +82,6 @@ if __name__ == "__main__":
         for file in files:
             if '.pyc' in file or '.json' in file:
                 continue
-            client.load_extension(f"{p}.{file}".replace('/', '.').replace('.py', ''))
+            client.load_extension(f"{p}.{file}".replace('\\', '.').replace('.py', ''))
 
-    client.run(getenv("Violet"))
+    client.run(getenv("token"))
