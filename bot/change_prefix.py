@@ -4,10 +4,13 @@ import json
 import utils
 import requests
 from translates import changeprefix, prefix_limit
+from os import getenv
+import dotenv
 
 class Prefix(commands.Cog):
     def __init__(self, client):
         self.client = client
+        dotenv.load_dotenv(dotenv.find_dotenv())
     
     @commands.command(aliases=['changeprefix', 'setprefix'])
     @commands.has_permissions(administrator=True)
@@ -16,7 +19,7 @@ class Prefix(commands.Cog):
         language = utils.Config(ctx.guild).language
         if len(prefix) > 3:
             return ctx.message.reply(prefix_limit(language))
-        url = 'https://jsonstorage.net/api/items/b1548f01-fd49-484b-be8c-3e2815520b15'
+        url = f'https://jsonstorage.net/api/items/{getenv("API_ITEM")}'
         headers = {'Content-Type': "application/json; charset=utf-8",'dataType': "json"}
         data = requests.get(url).json()
         data[str(ctx.guild.id)]["prefix"] = prefix
