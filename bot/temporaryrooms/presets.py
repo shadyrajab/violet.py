@@ -13,7 +13,7 @@ class Presets():
         self.client = client
         self.guild = guild
         dotenv.load_dotenv(dotenv.find_dotenv())
-        self.url = getenv("Presets")
+        self.url = f'https://jsonstorage.net/api/items/{getenv("Presets")}'
         self.presets = requests.get(self.url).json()
         
         if guild:
@@ -446,7 +446,7 @@ class TRConfig(commands.Cog):
                     await message.add_reaction("✅")
                     reaction, _user = await self.client.wait_for("reaction_add", check=check)
                     if reaction.emoji == "✅":
-                        url = getenv("Presets")
+                        url = f'https://jsonstorage.net/api/items/{getenv("Presets")}'
                         presets = requests.get(url).json()
                         presets.pop(str(ctx.author.id)) if len(presets[str(ctx.author.id)]) == 1 else presets[str(ctx.author.id)].pop(str(guild.id))
                         headers = {'Content-Type': "application/json; charset=utf-8",'dataType': "json"}
@@ -468,7 +468,7 @@ class TRConfig(commands.Cog):
 
             reaction, _user = await self.client.wait_for("reaction_add", check=check, timeout=60.0)
             if reaction.emoji == "✔️":
-                url = getenv("Presets")
+                url = f'https://jsonstorage.net/api/items/{getenv("Presets")}'
                 presets = requests.get(url).json()
                 try:
                     if len(presets[str(ctx.author.id)]) >= 2:
@@ -503,7 +503,7 @@ class TRConfig(commands.Cog):
     @commands.Cog.listener()
     async def on_guild_remove(self, guild):
         preset_ = None
-        url = getenv("Presets")
+        url = f'https://jsonstorage.net/api/items/{getenv("Presets")}'
         presets = requests.get(url).json()
         for preset in presets:
             try:

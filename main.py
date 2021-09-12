@@ -27,7 +27,7 @@ async def on_ready():
 
 @client.event
 async def on_guild_join(guild):
-    url = getenv("Config")
+    url = f'https://jsonstorage.net/api/items/{getenv("Config")}'
     data = requests.get(url).json()
     data[str(guild.id)]= {
         'prefix': "*",
@@ -59,7 +59,7 @@ async def on_guild_join(guild):
 
 @client.event
 async def on_guild_remove(guild):
-    url = getenv("Config")
+    url = f'https://jsonstorage.net/api/items/{getenv("Config")}'
     data = requests.get(url).json()
     data.pop(str(guild.id))
     headers = {'Content-Type': "application/json; charset=utf-8",'dataType': "json"}
