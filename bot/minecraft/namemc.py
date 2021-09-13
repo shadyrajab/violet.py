@@ -25,7 +25,7 @@ class NameMc(commands.Cog):
         embed.set_author(name=f'{user["name"]}', icon_url=avatar)
         embed.add_field(name='UUID', value=user["id"])
         embed.add_field(name='Skin', value=f'[Baixar Skin]({skin})', inline=False)
-        embed.add_field(name='Histórico de nomes', value=f'.\n'.join(f'**{i} - **' + name["name"] for i, name in enumerate(history_name, start=1)))
+        embed.add_field(name='Histórico de nomes', value=f'\n'.join(f'**{i} - **' + name["name"].replace('_', '\_') for i, name in enumerate(history_name, start=1)))
         for timestamp in history_name:
             try:
                 dtobject = datetime.fromtimestamp(int(str(timestamp["changedToAt"])[0:10]))
